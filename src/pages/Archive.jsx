@@ -1,0 +1,2 @@
+import editions from '../data/editions.json'; import EditionCard from '../components/EditionCard'; import {SectionTitle} from '../components/ui';
+export default function Archive(){return <section className="page archive"><header className="page-heading"><p>MEMORIA EN PAPEL</p><h1>Archivo de<br/><em>ediciones</em></h1><p>Una colección en construcción. Cada número es una conversación que no termina.</p></header><SectionTitle eyebrow="TODOS LOS NÚMEROS"/><div className="edition-grid">{editions.map(e=><EditionCard key={e.id} edition={e}/>)}</div></section>}

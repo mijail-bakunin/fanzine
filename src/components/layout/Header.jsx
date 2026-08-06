@@ -1,0 +1,3 @@
+import { Link, NavLink } from 'react-router-dom';
+const links=[['/','Inicio'],['/archivo','Archivo'],['/quienes-somos','Quiénes somos'],['/manifiesto','Manifiesto'],['/colaborar','Colaborar'],['/contacto','Contacto']];
+export default function Header(){return <header className="masthead"><div className="masthead__top"><span>REVISTA ANARQUISTA</span><span>EDICIÓN PERMANENTE</span></div><Link className="logo" to="/">LA<br/><i>GUILLOTINA</i></Link><p className="motto">Contra toda autoridad</p><nav aria-label="Principal">{links.map(([to,label])=><NavLink key={to} to={to} end={to==='/' }>{label}</NavLink>)}</nav></header>}

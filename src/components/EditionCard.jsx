@@ -1,0 +1,2 @@
+import { ArrowLink, Stamp } from './ui';
+export default function EditionCard({edition,featured=false}){return <article className={`edition-card ${featured?'edition-card--featured':''}`}><div className="edition-card__number"><Stamp>{edition.number}</Stamp></div><p className="edition-card__date">{edition.date}</p><h3>{edition.title}</h3><p className="edition-card__theme">{edition.theme}</p><p>{edition.summary}</p><ArrowLink to={`/edicion/${edition.slug}`}>Abrir edición</ArrowLink></article>}
