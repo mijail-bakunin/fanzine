@@ -1,0 +1,44 @@
+.fragment > .story-note {
+  position: absolute;
+  z-index: 4;
+  right: 7px;
+  bottom: 7px;
+  left: 7px;
+  display: grid;
+  gap: 2px;
+  width: calc(100% - 14px);
+  cursor: pointer;
+  border: 2px solid currentColor;
+  background: #050505;
+  color: #fff;
+  padding: 6px 7px;
+  text-align: left;
+  font-family: 'DM Mono', monospace;
+  line-height: 1.25;
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+}
+
+.fragment > .story-note:hover,
+.fragment > .story-note:focus-visible {
+  transform: rotate(-5deg);
+  outline: 3px solid #ffe733;
+  outline-offset: 3px;
+  background: #b30000;
+  box-shadow: 3px 3px 0 currentColor;
+}
+
+.story-note span { font-size: 8px; letter-spacing: .07em; }
+.story-note strong { font-size: clamp(9px, 1.35cqw, 14px); text-transform: uppercase; line-height: 1.1; }
+.story-note small { font: 8px 'Special Elite', monospace; opacity: .8; }
+.story-note--red { color: #ff4048; }
+.story-note--cyan { color: #15deed; }
+.story-note--yellow { color: #ffe733; }
+.story-note--lime { color: #ceff3d; }
+.modal-status { color: currentColor; font: 11px 'DM Mono', monospace; }
+.note-modal form button:disabled, .note-modal textarea:disabled { cursor: not-allowed; opacity: .65; }
+
+@media (max-width: 600px) {
+  .fragment > .story-note { right: 4px; bottom: 4px; left: 4px; width: calc(100% - 8px); padding: 4px; }
+  .story-note strong { font-size: 8px; }
+  .story-note small { display: none; }
+}

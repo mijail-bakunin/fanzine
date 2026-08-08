@@ -6,7 +6,7 @@ let localComments = clone(mockComments);
 
 export const notesApi = {
   async getEditionHome() {
-    if (hasRemoteApi) return request('/editions/n-001-la-grieta/home');
+    if (hasRemoteApi) return request('/editions/n-012-la-libertad/home');
     return { edition: clone(mockEdition), notes: clone(mockNotes) };
   },
   async getComments(noteId) {

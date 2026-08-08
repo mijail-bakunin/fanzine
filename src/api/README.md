@@ -2,7 +2,7 @@
 
 Cuando `VITE_API_BASE_URL` exista, la interfaz deja de usar los mocks y consume:
 
-- `GET /editions/n-001-la-grieta/home` → `{ edition, notes }`
+- `GET /editions/n-012-la-libertad/home` → `{ edition, notes }`
 - `GET /notes/:noteId/comments` → `Comment[]`
 - `POST /notes/:noteId/comments` → `{ author, body }` → `Comment`
 - `POST /notes/:noteId/comments/:commentId/upvote` → `Comment`

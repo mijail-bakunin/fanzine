@@ -1,5 +1,10 @@
+import editions from './editions.json';
+
+const currentEdition = editions[0];
+
 export const mockEdition = {
-  id: 'n-001-la-grieta', number: 'Nº 12', publication: 'La Guillotina',
+  ...currentEdition,
+  publication: 'La Guillotina',
   navigation: [
     { label: 'Ediciones', to: '/archivo' }, { label: 'Quiénes somos', to: '/quienes-somos' },
     { label: 'Manifiesto', to: '/manifiesto' }, { label: 'Colaborar', to: '/colaborar' }, { label: 'Contacto', to: '/contacto' },
